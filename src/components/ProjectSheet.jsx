@@ -65,7 +65,7 @@ const ProjectSheet = () => {
                             </button>
                         ))}
                     </div>
-                    <div className="flex items-center flex-col gap-6 w-full px-4 lg:px-6 pb-6 overflow-y-scroll h-[70vh] lg:h-[85vh] mt-6 link_scroll border-l-[4px] border-[#7a7676">
+                    <div className="flex items-center flex-col gap-6 pt-1 w-full px-4 lg:px-6 pb-6 overflow-y-scroll h-[70vh] lg:h-[85vh] mt-6 link_scroll border-l-[4px] border-[#7a7676">
                         {tabs.map((tab) => (
                             activeTab === tab.id && tab.content
                         ))}
