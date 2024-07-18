@@ -32,7 +32,7 @@ const ProjectSheet = () => {
         return {
             id: tabId,
             label: monthName,
-            content: projectsByMonth[tabId] || <p>No projects for this month.</p>,
+            content: projectsByMonth[tabId] || <p className=' font-Grandstander text-4xl font-semibold capitalize'>No projects for this month.</p>,
         };
     });
     const handleTabClick = (tabId) => {
