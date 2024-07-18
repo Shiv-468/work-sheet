@@ -1,9 +1,9 @@
 import React from 'react'
-import Sneakers from '../assets/images/webp/Sneakers.png';
-import ExclusiveGames from '../assets/images/webp/ExclusiveGames.png';
-import Company from '../assets/images/webp/Company.png';
-import NexAi from '../assets/images/webp/NexAi.png';
-import NobleMind from '../assets/images/webp/NobleMind.png';
+import Sneakers from '../assets/images/webp/Sneakers.webp';
+import ExclusiveGames from '../assets/images/webp/ExclusiveGames.webp';
+import Company from '../assets/images/webp/Company.webp';
+import NexAi from '../assets/images/webp/NexAi.webp';
+import NobleMind from '../assets/images/webp/NobleMind.webp';
 
 const february2024Projects = [
     {

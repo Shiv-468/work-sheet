@@ -1,6 +1,6 @@
 import React from 'react'
-import Hubrich from '../assets/images/webp/Hubrich.png';
-import Edge from '../assets/images/webp/Edge.png';
+import Hubrich from '../assets/images/webp/Hubrich.webp';
+import Edge from '../assets/images/webp/Edge.webp';
 const june2024Projects = [
     {
         githubLink: 'https://github.com/Shiv-468/Consultency-page.git',

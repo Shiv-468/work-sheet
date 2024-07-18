@@ -1,10 +1,10 @@
 import React from 'react';
-import Eventsfree from '../assets/images/webp/Eventsfree.png';
-import FestivalProfile from '../assets/images/webp/FestivalProfile.png';
-import VipeStudio from '../assets/images/webp/VipeStudio.png';
-import LayoutTailwind from '../assets/images/webp/LayoutTailwind.png';
-import Crappo from '../assets/images/webp/Crappo.png';
-import DecoMaster from '../assets/images/webp/DecoMaster.png';
+import Eventsfree from '../assets/images/webp/Eventsfree.webp';
+import FestivalProfile from '../assets/images/webp/FestivalProfile.webp';
+import VipeStudio from '../assets/images/webp/VipeStudio.webp';
+import LayoutTailwind from '../assets/images/webp/LayoutTailwind.webp';
+import Crappo from '../assets/images/webp/Crappo.webp';
+import DecoMaster from '../assets/images/webp/DecoMaster.webp';
 
 const january2024Projects = [
   {

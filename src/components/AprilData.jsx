@@ -1,8 +1,8 @@
 import React from 'react'
-import Passage from '../assets/images/webp/Passage.png'
-import IdoxAi from '../assets/images/webp/IdoxAi.png'
-import Cybertise from '../assets/images/webp/Cybertise.png'
-import Gardena from '../assets/images/webp/Gardena.png'
+import Passage from '../assets/images/webp/Passage.webp'
+import IdoxAi from '../assets/images/webp/IdoxAi.webp'
+import Cybertise from '../assets/images/webp/Cybertise.webp'
+import Gardena from '../assets/images/webp/Gardena.webp'
 
 const april2024Projects = [
     {

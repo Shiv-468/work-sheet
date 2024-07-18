@@ -1,8 +1,8 @@
 import React from 'react'
-import SolanaPage from '../assets/images/webp/SolanaPage.png'
-import Blockchain from '../assets/images/webp/Blockchain.png'
-import Atlentic from '../assets/images/webp/Atlentic.png'
-import Fitness from '../assets/images/webp/Fitness.png'
+import SolanaPage from '../assets/images/webp/SolanaPage.webp'
+import Blockchain from '../assets/images/webp/Blockchain.webp'
+import Atlentic from '../assets/images/webp/Atlentic.webp'
+import Fitness from '../assets/images/webp/Fitness.webp'
 const may2024Projects = [
     {
       githubLink: 'https://github.com/Shiv-468/SOLANA-page-1.git',

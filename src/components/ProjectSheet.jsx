@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Icons from './icon';
-import Profile from '../assets/images/webp/Profile.jpg'
+import Profile from '../assets/images/webp/Profile.webp'
 import JanuaryData from './JanuaryData';
 import MarchData from './MarchData';
 import AprilData from './AprilData'

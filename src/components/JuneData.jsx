@@ -1,6 +1,6 @@
 import React from 'react'
-import Sclair from '../assets/images/webp/Sclair.png';
-import Mypets from '../assets/images/webp/Mypets.png';
+import Sclair from '../assets/images/webp/Sclair.webp';
+import Mypets from '../assets/images/webp/Mypets.webp';
 const june2024Projects = [
     {
         githubLink: 'https://github.com/Shiv-468/Mypets.git',

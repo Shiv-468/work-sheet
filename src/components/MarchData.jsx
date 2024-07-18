@@ -1,10 +1,10 @@
 import React from 'react'
-import JulianProject from '../assets/images/webp/JulianProject.png'
-import EverGreen from '../assets/images/webp/EverGreen.png'
-import CVHawk from '../assets/images/webp/CV-Hawk.png'
-import HustlinHardos from '../assets/images/webp/HustlinHardos.png'
-import Chimpz from '../assets/images/webp/Chimpz.png'
-import TravelClub from '../assets/images/webp/TravelClub.png'
+import JulianProject from '../assets/images/webp/JulianProject.webp'
+import EverGreen from '../assets/images/webp/EverGreen.webp'
+import CVHawk from '../assets/images/webp/CV-Hawk.webp'
+import HustlinHardos from '../assets/images/webp/HustlinHardos.webp'
+import Chimpz from '../assets/images/webp/Chimpz.webp'
+import TravelClub from '../assets/images/webp/TravelClub.webp'
 const march2024Projects = [
     {
         githubLink: 'https://github.com/Shiv-468/The-Julian-project-Rebuild.git',
