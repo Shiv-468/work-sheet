@@ -5,7 +5,8 @@
 
 
 .link_scroll::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
+  height: 10px;
 }
 
 .link_scroll::-webkit-scrollbar-thumb {

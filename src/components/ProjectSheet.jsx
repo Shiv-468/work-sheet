@@ -42,11 +42,11 @@ const ProjectSheet = () => {
     return (
         <section >
             <div className=" p-4  shadow-LinkBox">
-                <div className="max-w-[1140px] mx-auto px-3">
+                <div className="max-w-[1140px] mx-auto">
                     <div className="flex justify-between items-center">
                         <Icons icon="Logo" />
-                        <div className=" flex items-center gap-3 ">
-                            <h1 className=' font-Grandstander font-bold text-3xl pt-[6px]'>Shiv-468</h1>
+                        <div className=" flex items-center gap-2 sm:gap-3 ">
+                            <h1 className=' font-Grandstander font-bold text-xl sm:text-3xl pt-[6px]'>Shiv-468</h1>
                             <img src={Profile} className=' rounded-full w-[40px] h-[40px]' alt="profileimg" />
                         </div>
                     </div>
@@ -54,7 +54,7 @@ const ProjectSheet = () => {
             </div>
             <div className="max-w-[1140px] mx-auto px-3 ">
                 <div className="flex flex-col lg:flex-row">
-                    <div className="flex lg:flex-col overflow-x-scroll gap-10 lg:max-w-[200px] link_scroll w-full items-center pe-6 pb-6 mt-6 ">
+                    <div className="flex lg:flex-col overflow-x-scroll gap-6 md:gap-10 lg:max-w-[200px] link_scroll w-full items-center pe-6 pb-6 mt-6 ">
                         {tabs.map((tab) => (
                             <button
                                 key={tab.id}
@@ -65,7 +65,7 @@ const ProjectSheet = () => {
                             </button>
                         ))}
                     </div>
-                    <div className="flex items-center flex-col gap-6 pt-1 w-full px-4 lg:px-6 pb-6 overflow-y-scroll h-[70vh] lg:h-[85vh] mt-6 link_scroll border-l-[4px] border-[#7a7676">
+                    <div className="flex items-center flex-col gap-6 pt-1 w-full px-4 lg:px-6 pb-6 overflow-y-scroll h-[70vh] lg:h-[85vh] mt-6 link_scroll lg:border-l-[4px] lg:border-[#7a7676">
                         {tabs.map((tab) => (
                             activeTab === tab.id && tab.content
                         ))}
