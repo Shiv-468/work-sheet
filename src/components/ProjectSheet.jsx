@@ -33,7 +33,7 @@ const projectsByMonth = {
 const ProjectSheet = () => {
     const [selectedYear, setSelectedYear] = useState(2024);
     const [dropdownOpen, setDropdownOpen] = useState(false);
-    const years = Array.from({ length: 10 }, (_, i) => 2024 - i);
+    const years = Array.from({ length: 6 }, (_, i) => 2024 - i);
     const [activeTab, setActiveTab] = useState(getCurrentMonthTab(2024));
     const [noDataAvailable, setNoDataAvailable] = useState(false);
 
