@@ -90,25 +90,23 @@ const ProjectSheet = () => {
     };
 
     return (
-        <section>
+        <section className=' '>
             <div className="p-4 shadow-LinkBox">
                 <div className="max-w-[1140px] mx-auto">
                     <div className="flex justify-between items-center">
-                        <Icons icon="Logo" />
-                        <div className="flex items-center gap-2 sm:gap-3">
-                            <h1 className='font-Grandstander font-bold text-xl sm:text-3xl pt-[6px]'>Shiv-468</h1>
-                            <img src={Profile} className='rounded-full w-[40px] h-[40px]' alt="profileimg" />
-                        </div>
+                       <div className=" flex items-center max-w-[200px]">
+                       <Icons icon="Logo" />
+                       </div>
                         <div className="relative">
                             <button
-                                className="flex items-center justify-center shadow-LinkBox rounded-[8px] px-4 py-1 gap-2 text-lg font-Grandstander font-bold"
+                                className="flex items-center justify-center shadow-Dropbtn rounded-[8px] px-4 py-1 gap-2 text-lg font-Grandstander font-bold"
                                 onClick={() => setDropdownOpen(!dropdownOpen)}
                             >
                                 <span className='pt-1'>{selectedYear}</span>
                                 <img src={Downchevron} alt="Downchevron" className='w-[20px]' />
                             </button>
                             {dropdownOpen && (
-                                <div className="absolute right-0 mt-2 w-40 bg-white rounded shadow-LinkBox">
+                                <div className="absolute right-0 mt-2 w-40 bg-white rounded shadow-Dropbtn">
                                     <ul>
                                         {years.map((year) => (
                                             <li key={year}>
@@ -133,11 +131,11 @@ const ProjectSheet = () => {
             ) : (
                 <div className="max-w-[1140px] mx-auto px-3">
                     <div className="flex flex-col lg:flex-row">
-                        <div className="flex lg:flex-col overflow-x-scroll gap-6 lg:max-w-[200px] link_scroll w-full items-center pe-6 pb-6 mt-6 lg:border-r-[4px] lg:border-[#7a7676]">
+                        <div className="flex lg:flex-col overflow-x-scroll gap-6 lg:max-w-[200px] link_scroll w-full items-center pe-5 ps-1 pt-1 pb-6 mt-6 lg:border-r-[4px] lg:border-[#7a7676]">
                             {tabs.map((tab) => (
                                 <button
                                     key={tab.id}
-                                    className={`lg:px-3 py-3 text-lg px-8 font-semibold border rounded-[5px] max-w-[200px] w-full ${activeTab === tab.id ? 'bg-[#5928E5] text-white' : 'bg-gray-200 text-black'}`}
+                                    className={`lg:px-3 hover:shadow-Dropbtn py-3 text-lg px-8 font-semibold border rounded-[5px] max-w-[200px] w-full ${activeTab === tab.id ? 'bg-[#5928E5] text-white' : 'bg-gray-200 text-black'}`}
                                     onClick={() => handleTabClick(tab.id)}
                                 >
                                     {tab.label}
