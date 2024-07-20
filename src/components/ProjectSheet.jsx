@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Icons from './icons';
-import Profile from '../assets/images/webp/Profile.webp'
 import JanuaryData from './JanuaryData';
 import MarchData from './MarchData';
 import AprilData from './AprilData'
@@ -14,20 +13,20 @@ import NovemberData from './NovemberData';
 import DecemberData from './DecemberData';
 
 const projectsByMonth = {
-  2024: {
-    January2024: <JanuaryData year={2024} />,
-    February2024: <FebruaryData year={2024} />,
-    March2024: <MarchData year={2024} />,
-    April2024: <AprilData year={2024} />,
-    May2024: <MayData year ={2024} />,
-    June2024: <JuneData year={2024} />,
-    July2024: <JulyData year={2024} />,
-  },
-  2023: {
-    October2023: <OctoberData year={2023}/>,
-    November2023:<NovemberData year={2023}/>,
-    December2023:<DecemberData year={2023}/>,
-  }
+    2024: {
+        January2024: <JanuaryData year={2024} />,
+        February2024: <FebruaryData year={2024} />,
+        March2024: <MarchData year={2024} />,
+        April2024: <AprilData year={2024} />,
+        May2024: <MayData year={2024} />,
+        June2024: <JuneData year={2024} />,
+        July2024: <JulyData year={2024} />,
+    },
+    2023: {
+        October2023: <OctoberData year={2023} />,
+        November2023: <NovemberData year={2023} />,
+        December2023: <DecemberData year={2023} />,
+    }
 };
 
 const ProjectSheet = () => {
@@ -84,7 +83,6 @@ const ProjectSheet = () => {
             };
         });
     }
-
     const handleTabClick = (tabId) => {
         setActiveTab(tabId);
     };
@@ -94,14 +92,12 @@ const ProjectSheet = () => {
             <div className="p-3 shadow-LinkBox">
                 <div className="max-w-[1140px] mx-auto">
                     <div className="flex justify-between items-center">
-                       <div className=" flex items-center max-w-[200px]">
-                       <Icons icon="Logo" />
-                       </div>
+                        <div className=" flex items-center max-w-[200px]">
+                            <Icons icon="Logo" />
+                        </div>
                         <div className="relative">
-                            <button
-                                className="flex items-center justify-center shadow-Dropbtn rounded-[8px] px-4 py-1 gap-2 text-lg font-Grandstander font-bold"
-                                onClick={() => setDropdownOpen(!dropdownOpen)}
-                            >
+                            <button className="flex items-center justify-center shadow-Dropbtn rounded-[8px] px-4 py-1 gap-2 text-lg font-Grandstander font-bold"
+                                onClick={() => setDropdownOpen(!dropdownOpen)}>
                                 <span className='pt-1'>{selectedYear}</span>
                                 <img src={Downchevron} alt="Downchevron" className='w-[20px]' />
                             </button>
@@ -110,13 +106,9 @@ const ProjectSheet = () => {
                                     <ul>
                                         {years.map((year) => (
                                             <li key={year}>
-                                                <a
-                                                    href="#"
-                                                    className="block px-4 py-2 text-lg font-Grandstander font-bold text-center hover:text-[#5928E5]"
-                                                    onClick={() => handleYearSelect(year)}
-                                                >
-                                                    {year}
-                                                </a>
+                                                <a href="#" className="block px-4 py-2 text-lg font-Grandstander font-bold text-center hover:text-[#5928E5]"
+                                                    onClick={() => handleYearSelect(year)} rel="noopener noreferrer" >
+                                                    {year}</a>
                                             </li>
                                         ))}
                                     </ul>
@@ -133,11 +125,8 @@ const ProjectSheet = () => {
                     <div className="flex flex-col lg:flex-row">
                         <div className="flex lg:flex-col overflow-x-scroll gap-6 lg:max-w-[200px] link_scroll w-full items-center pe-5 ps-1 pt-1 pb-6 mt-6 lg:border-r-[4px] lg:border-[#7a7676]">
                             {tabs.map((tab) => (
-                                <button
-                                    key={tab.id}
-                                    className={`lg:px-3 hover:shadow-Dropbtn py-3 text-lg px-8 font-semibold border rounded-[5px] max-w-[200px] w-full ${activeTab === tab.id ? 'bg-[#5928E5] text-white' : 'bg-gray-200 text-black'}`}
-                                    onClick={() => handleTabClick(tab.id)}
-                                >
+                                <button key={tab.id} className={`lg:px-3 hover:shadow-Dropbtn py-3 text-lg px-8 font-semibold border rounded-[5px] max-w-[200px] w-full ${activeTab === tab.id ? 'bg-[#5928E5] text-white' : 'bg-gray-200 text-black'}`}
+                                    onClick={() => handleTabClick(tab.id)}>
                                     {tab.label}
                                 </button>
                             ))}
@@ -157,30 +146,16 @@ const ProjectSheet = () => {
         </section>
     );
 };
-
 const getCurrentMonthTab = (year) => {
     const month = new Date().getMonth() + 1;
     const monthName = getMonthName(month);
     const currentYear = new Date().getFullYear();
     return year === currentYear ? `${monthName}${year}` : `January${year}`;
 };
-
 const getMonthName = (month) => {
     const monthNames = [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December',
+        'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December',
     ];
     return monthNames[month - 1];
 };
-
 export default ProjectSheet;
