@@ -1,48 +1,11 @@
 import React from 'react';
-import Eventsfree from '../assets/images/webp/Eventsfree.webp';
-import FestivalProfile from '../assets/images/webp/FestivalProfile.webp';
-import VipeStudio from '../assets/images/webp/VipeStudio.webp';
-import LayoutTailwind from '../assets/images/webp/LayoutTailwind.webp';
-import Crappo from '../assets/images/webp/Crappo.webp';
-import DecoMaster from '../assets/images/webp/DecoMaster.webp';
+import { januaryData } from '../common/Helper';
+import Images from '../common/Images';
 
-const january2024Projects = [
-  {
-    githubLink: 'https://github.com/Shiv-468/chatapp-tailwind.git',
-    vercelLink: 'https://chatapp-tailwind-theta.vercel.app/',
-    image: Eventsfree,
-  },
-  {
-    githubLink: 'https://github.com/Shiv-468/Festival-Profile.git',
-    vercelLink: 'https://festival-profile-orpin.vercel.app/',
-    image: FestivalProfile,
-  },
-  {
-    githubLink: 'https://github.com/Shiv-468/Deco-Master.git',
-    vercelLink: 'https://deco-master-sage.vercel.app/',
-    image: DecoMaster,
-  },
-  {
-    githubLink: 'https://github.com/Shiv-468/layout-page-tailwind.git',
-    vercelLink: 'https://layout-page-tailwind.vercel.app/',
-    image: LayoutTailwind,
-  },
-  {
-    githubLink: 'https://github.com/Shiv-468/VIPE_STUDIO.git',
-    vercelLink: 'https://vipe-studio-aj28.vercel.app/',
-    image: VipeStudio,
-  },
-  {
-    githubLink: 'https://github.com/Shiv-468/CRAPPO.git',
-    vercelLink: 'https://crappo-phi.vercel.app/',
-    image: Crappo,
-  },
-];
-
-const JanuaryData = () => (
+const JanuaryData = ({ year }) => (
   <>
-    {january2024Projects.map((project, index) => (
-       <div key={index} className="flex flex-col md:flex-row w-full justify-between items-center border p-3 rounded-[16px] hover:shadow-LinkBox duration-300 ease-linear">
+    {januaryData[year].map((project, index) => (
+      <div key={index} className="flex flex-col md:flex-row w-full justify-between items-center border p-3 rounded-[16px] hover:shadow-LinkBox duration-300 ease-linear">
         <div className="flex gap-1">
           <h3 className="text-2xl font-medium font-Grandstander">{`${index + 1}.`}</h3>
           <div className="flex flex-col">
@@ -56,10 +19,12 @@ const JanuaryData = () => (
             </div>
           </div>
         </div>
-        {project.image && <img src={project.image} alt={`Project ${index + 1}`} className="max-w-[230px] max-h-[150px] rounded-[16px]" />}
+        <Images image={project.image} className="max-w-[230px] max-h-[150px] rounded-[16px]" />
       </div>
     ))}
   </>
 );
 
 export default JanuaryData;
+
+

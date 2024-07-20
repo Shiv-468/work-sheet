@@ -1,10 +1,10 @@
-import React from 'react';
-import { februaryData } from '../common/Helper';
+import React from 'react'
+import { decemberData } from '../common/Helper';
 import Images from '../common/Images';
-
-const JanuaryData = ({ year }) => (
-  <>
-    {februaryData[year].map((project, index) => (
+const DecemberData = ({year}) => {
+  return (
+    <>
+    {decemberData[year].map((project, index) => (
       <div key={index} className="flex flex-col md:flex-row w-full justify-between items-center border p-3 rounded-[16px] hover:shadow-LinkBox duration-300 ease-linear">
         <div className="flex gap-1">
           <h3 className="text-2xl font-medium font-Grandstander">{`${index + 1}.`}</h3>
@@ -23,8 +23,7 @@ const JanuaryData = ({ year }) => (
       </div>
     ))}
   </>
-);
+  )
+}
 
-export default JanuaryData;
-
-
+export default DecemberData

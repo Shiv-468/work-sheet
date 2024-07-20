@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Icons from './icon';
+import Icons from './icons';
 import Profile from '../assets/images/webp/Profile.webp'
 import JanuaryData from './JanuaryData';
 import MarchData from './MarchData';
@@ -9,24 +9,25 @@ import FebruaryData from './FebruaryData';
 import JuneData from './JuneData';
 import JulyData from './JulyData';
 import Downchevron from '../assets/images/webp/down-chevron-svgrepo-com.svg'
-import October from '../firstyear/October';
-import November from '../firstyear/November';
+import OctoberData from './OctoberData';
+import NovemberData from './NovemberData';
+import DecemberData from './DecemberData';
 
 const projectsByMonth = {
-    2024: {
-        January2024: <JanuaryData />,
-        February2024: <FebruaryData />,
-        March2024: <MarchData />,
-        April2024: <AprilData />,
-        May2024: <MayData />,
-        June2024: <JuneData />,
-        July2024: <JulyData />,
-    },
-    2023: {
-        October2023: <October/>,
-        November2023:<November/>,
-        // December2023:<December2023/>,
-    }
+  2024: {
+    January2024: <JanuaryData year={2024} />,
+    February2024: <FebruaryData year={2024} />,
+    March2024: <MarchData year={2024} />,
+    April2024: <AprilData year={2024} />,
+    May2024: <MayData year ={2024} />,
+    June2024: <JuneData year={2024} />,
+    July2024: <JulyData year={2024} />,
+  },
+  2023: {
+    October2023: <OctoberData year={2023}/>,
+    November2023:<NovemberData year={2023}/>,
+    December2023:<DecemberData year={2023}/>,
+  }
 };
 
 const ProjectSheet = () => {
