@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import Icons from './icons';
 import JanuaryData from './JanuaryData';
 import MarchData from './MarchData';
-import AprilData from './AprilData'
+import AprilData from './AprilData';
 import MayData from './MayData';
 import FebruaryData from './FebruaryData';
 import JuneData from './JuneData';
 import JulyData from './JulyData';
-import Downchevron from '../assets/images/webp/down-chevron-svgrepo-com.svg'
+import Downchevron from '../assets/images/webp/down-chevron-svgrepo-com.svg';
 import OctoberData from './OctoberData';
 import NovemberData from './NovemberData';
 import DecemberData from './DecemberData';
@@ -42,11 +42,7 @@ const ProjectSheet = () => {
             setActiveTab(null);
         } else {
             setNoDataAvailable(false);
-            if (selectedYear === new Date().getFullYear()) {
-                setActiveTab(getCurrentMonthTab(selectedYear));
-            } else {
-                setActiveTab(`January${selectedYear}`);
-            }
+            setActiveTab(getCurrentMonthTab(selectedYear));
         }
     }, [selectedYear]);
 
@@ -83,6 +79,7 @@ const ProjectSheet = () => {
             };
         });
     }
+
     const handleTabClick = (tabId) => {
         setActiveTab(tabId);
     };
@@ -146,16 +143,25 @@ const ProjectSheet = () => {
         </section>
     );
 };
+
 const getCurrentMonthTab = (year) => {
     const month = new Date().getMonth() + 1;
     const monthName = getMonthName(month);
     const currentYear = new Date().getFullYear();
-    return year === currentYear ? `${monthName}${year}` : `January${year}`;
+    if (year === currentYear) {
+        return `${monthName}${year}`;
+    } else if (year === 2023) {
+        return 'October2023';
+    } else {
+        return `January${year}`;
+    }
 };
+
 const getMonthName = (month) => {
     const monthNames = [
         'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December',
     ];
     return monthNames[month - 1];
 };
+
 export default ProjectSheet;
