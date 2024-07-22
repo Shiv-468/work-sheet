@@ -88,7 +88,7 @@ const ProjectSheet = () => {
     };
 
     return (
-        <section className=' '>
+        <section>
             <div className="p-3 shadow-LinkBox">
                 <div className="max-w-[1140px] mx-auto">
                     <div className="flex justify-between items-center">
