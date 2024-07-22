@@ -1,47 +1,11 @@
 import React from 'react'
-import JulianProject from '../assets/images/webp/JulianProject.webp'
-import EverGreen from '../assets/images/webp/EverGreen.webp'
-import CVHawk from '../assets/images/webp/CV-Hawk.webp'
-import HustlinHardos from '../assets/images/webp/HustlinHardos.webp'
-import Chimpz from '../assets/images/webp/Chimpz.webp'
-import TravelClub from '../assets/images/webp/TravelClub.webp'
-const march2024Projects = [
-    {
-        githubLink: 'https://github.com/Shiv-468/The-Julian-project-Rebuild.git',
-        vercelLink: 'https://the-julian-project-rebuild.vercel.app/',
-        image: JulianProject,
-      },
-      {
-          githubLink: 'https://github.com/Shiv-468/Ever_green.git',
-          vercelLink: 'https://ever-green-jade.vercel.app/',
-          image: EverGreen,
-        },
-        {
-          githubLink: 'https://github.com/Shiv-468/CV-Hawk.git',
-          vercelLink: 'https://company-beta-olive.vercel.app/',
-          image: CVHawk,
-        },
-        {
-          githubLink: 'https://github.com/Shiv-468/Hustlin-Hardos.git',
-          vercelLink: 'https://hustlin-hardos-beta.vercel.app/',
-          image: HustlinHardos,
-        },
-        {
-          githubLink: 'https://github.com/Shiv-468/test1.git',
-          vercelLink: 'https://test1-zeta-indol.vercel.app/',
-          image: Chimpz,
-        },
-        {
-            githubLink: 'https://github.com/Shiv-468/The-travel-club.git',
-            vercelLink: 'https://the-travel-club.vercel.app/',
-            image: TravelClub,
-          },
-  ];
-const MarchData = () => {
+import { marchData } from '../common/Helper';
+import Images from '../common/Images';
+const MarchData = ({year}) => {
   return (
     <>
-    {march2024Projects.map((project, index) => (
-       <div key={index} className="flex flex-col md:flex-row w-full justify-between items-center border p-3 rounded-[16px] hover:shadow-LinkBox duration-300 ease-linear">
+    {marchData[year].map((project, index) => (
+      <div key={index} className="flex flex-col md:flex-row w-full justify-between items-center border p-3 rounded-[16px] hover:shadow-LinkBox duration-300 ease-linear">
         <div className="flex gap-1">
           <h3 className="text-2xl font-medium font-Grandstander">{`${index + 1}.`}</h3>
           <div className="flex flex-col">
@@ -55,7 +19,7 @@ const MarchData = () => {
             </div>
           </div>
         </div>
-        {project.image && <img src={project.image} alt={`Project ${index + 1}`} className="max-w-[230px] max-h-[150px] rounded-[16px]" />}
+        <Images image={project.image} className="max-w-[230px] max-h-[150px] rounded-[16px]" />
       </div>
     ))}
   </>

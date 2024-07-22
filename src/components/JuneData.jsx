@@ -1,23 +1,11 @@
 import React from 'react'
-import Sclair from '../assets/images/webp/Sclair.webp';
-import Mypets from '../assets/images/webp/Mypets.webp';
-const june2024Projects = [
-    {
-        githubLink: 'https://github.com/Shiv-468/Mypets.git',
-        vercelLink: 'https://mypets-gamma.vercel.app/',
-        image: Mypets,
-      },
-      {
-          githubLink: 'https://github.com/Shiv-468/live-sale.git',
-          vercelLink: 'https://live-sale.vercel.app/',
-          image: Sclair,
-        },
-]
-const JuneData = () => {
+import { juneData } from '../common/Helper';
+import Images from '../common/Images';
+const JuneData = ({year}) => {
   return (
     <>
-    {june2024Projects.map((project, index) => (
-       <div key={index} className="flex flex-col md:flex-row w-full justify-between items-center border p-3 rounded-[16px] hover:shadow-LinkBox duration-300 ease-linear">
+    {juneData[year].map((project, index) => (
+      <div key={index} className="flex flex-col md:flex-row w-full justify-between items-center border p-3 rounded-[16px] hover:shadow-LinkBox duration-300 ease-linear">
         <div className="flex gap-1">
           <h3 className="text-2xl font-medium font-Grandstander">{`${index + 1}.`}</h3>
           <div className="flex flex-col">
@@ -31,7 +19,7 @@ const JuneData = () => {
             </div>
           </div>
         </div>
-        {project.image && <img src={project.image} alt={`Project ${index + 1}`} className="max-w-[230px] max-h-[150px] rounded-[16px]" />}
+        <Images image={project.image} className="max-w-[230px] w-full max-h-[150px] rounded-[16px]" />
       </div>
     ))}
   </>

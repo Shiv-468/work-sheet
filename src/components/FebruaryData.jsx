@@ -26,5 +26,3 @@ const JanuaryData = ({ year }) => (
 );
 
 export default JanuaryData;
-
-

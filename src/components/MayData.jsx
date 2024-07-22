@@ -1,34 +1,10 @@
 import React from 'react'
-import SolanaPage from '../assets/images/webp/SolanaPage.webp'
-import Blockchain from '../assets/images/webp/Blockchain.webp'
-import Atlentic from '../assets/images/webp/Atlentic.webp'
-import Fitness from '../assets/images/webp/Fitness.webp'
-const may2024Projects = [
-    {
-      githubLink: 'https://github.com/Shiv-468/SOLANA-page-1.git',
-      vercelLink: 'https://solana-page-1.vercel.app/',
-      image: SolanaPage,
-    },
-    {
-      githubLink: 'https://github.com/Shiv-468/blockchain-page.git',
-      vercelLink: 'https://blockchain-page-omega.vercel.app/',
-      image: Blockchain,
-    },
-    {
-      githubLink: 'https://github.com/Shiv-468/Atlantic.git',
-      vercelLink: 'https://atlantic-ecru.vercel.app/',
-      image: Atlentic,
-    },
-    {
-      githubLink: 'https://github.com/Shiv-468/Fitness-myths.git',
-      vercelLink: 'https://fitness-myths-tcsd.vercel.app/',
-      image: Fitness,
-    },
-  ];
-const MayData = () => {
+import { mayData } from '../common/Helper';
+import Images from '../common/Images';
+const MayData = ({year}) => {
   return (
     <>
-    {may2024Projects.map((project, index) => (
+    {mayData[year].map((project, index) => (
       <div key={index} className="flex flex-col md:flex-row w-full justify-between items-center border p-3 rounded-[16px] hover:shadow-LinkBox duration-300 ease-linear">
         <div className="flex gap-1">
           <h3 className="text-2xl font-medium font-Grandstander">{`${index + 1}.`}</h3>
@@ -43,7 +19,7 @@ const MayData = () => {
             </div>
           </div>
         </div>
-        {project.image && <img src={project.image} alt={`Project ${index + 1}`} className="max-w-[230px] max-h-[150px] rounded-[16px]" />}
+        <Images image={project.image} className="max-w-[230px] max-h-[150px] rounded-[16px]" />
       </div>
     ))}
   </>

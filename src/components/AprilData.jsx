@@ -1,36 +1,11 @@
 import React from 'react'
-import Passage from '../assets/images/webp/Passage.webp'
-import IdoxAi from '../assets/images/webp/IdoxAi.webp'
-import Cybertise from '../assets/images/webp/Cybertise.webp'
-import Gardena from '../assets/images/webp/Gardena.webp'
-
-const april2024Projects = [
-    {
-      githubLink: 'https://github.com/Shiv-468/Passage.git',
-      vercelLink: 'https://passage-self.vercel.app/',
-      image: Passage,
-    },
-    {
-      githubLink: 'https://github.com/Shiv-468/iDoxai.git',
-      vercelLink: 'https://i-doxai.vercel.app/',
-      image: IdoxAi,
-    },
-    {
-      githubLink: 'https://github.com/Shiv-468/cybertise.git',
-      vercelLink: 'https://cybertise.vercel.app/',
-      image: Cybertise,
-    },
-    {
-      githubLink: 'https://github.com/Shiv-468/Gardena.git',
-      vercelLink: 'https://gardena-pi.vercel.app/',
-      image: Gardena,
-    },
-  ];
-const AprilData = () => {
+import { aprilData } from '../common/Helper';
+import Images from '../common/Images';
+const AprilData = ({year}) => {
   return (
     <>
-    {april2024Projects.map((project, index) => (
-       <div key={index} className="flex flex-col md:flex-row w-full justify-between items-center border p-3 rounded-[16px] hover:shadow-LinkBox duration-300 ease-linear">
+    {aprilData[year].map((project, index) => (
+      <div key={index} className="flex flex-col md:flex-row w-full justify-between items-center border p-3 rounded-[16px] hover:shadow-LinkBox duration-300 ease-linear">
         <div className="flex gap-1">
           <h3 className="text-2xl font-medium font-Grandstander">{`${index + 1}.`}</h3>
           <div className="flex flex-col">
@@ -44,7 +19,7 @@ const AprilData = () => {
             </div>
           </div>
         </div>
-        {project.image && <img src={project.image} alt={`Project ${index + 1}`} className="max-w-[230px] max-h-[150px] rounded-[16px]" />}
+        <Images image={project.image} className="max-w-[230px] max-h-[150px] rounded-[16px]" />
       </div>
     ))}
   </>
