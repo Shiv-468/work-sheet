@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Icons from './icons';
+import Downchevron from '../assets/images/webp/down-chevron-svgrepo-com.svg';
 import JanuaryData from './JanuaryData';
+import FebruaryData from './FebruaryData';
 import MarchData from './MarchData';
 import AprilData from './AprilData';
 import MayData from './MayData';
-import FebruaryData from './FebruaryData';
 import JuneData from './JuneData';
 import JulyData from './JulyData';
-import Downchevron from '../assets/images/webp/down-chevron-svgrepo-com.svg';
 import OctoberData from './OctoberData';
 import NovemberData from './NovemberData';
 import DecemberData from './DecemberData';
