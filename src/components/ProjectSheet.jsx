@@ -89,9 +89,9 @@ const ProjectSheet = () => {
             <div className="p-3 shadow-LinkBox">
                 <div className="max-w-[1140px] mx-auto">
                     <div className="flex justify-between items-center">
-                        <div className=" flex items-center max-w-[200px]">
+                        <a href='#' className=" flex items-center max-w-[200px]">
                             <Icons icon="Logo" />
-                        </div>
+                        </a>
                         <div className="relative">
                             <button className="flex items-center justify-center shadow-Dropbtn rounded-[8px] px-4 py-1 gap-2 text-lg font-Grandstander font-bold"
                                 onClick={() => setDropdownOpen(!dropdownOpen)}>
