@@ -46,7 +46,7 @@ const ProjectSheet = () => {
         }
     }, [selectedYear]);
 
-    const handleYearSelect = (year) => {
+    const HANDLE_SELECT_YEAR = (year) => {
         setSelectedYear(year);
         setDropdownOpen(false);
     };
@@ -80,7 +80,7 @@ const ProjectSheet = () => {
         });
     }
 
-    const handleTabClick = (tabId) => {
+    const HANDLE_TAB_CLICK = (tabId) => {
         setActiveTab(tabId);
     };
 
@@ -104,7 +104,7 @@ const ProjectSheet = () => {
                                         {years.map((year) => (
                                             <li key={year}>
                                                 <a href="#" className="block px-4 py-2 text-lg font-Grandstander font-bold text-center hover:text-[#5928E5]"
-                                                    onClick={() => handleYearSelect(year)} rel="noopener noreferrer" >
+                                                    onClick={() => HANDLE_SELECT_YEAR(year)} rel="noopener noreferrer" >
                                                     {year}</a>
                                             </li>
                                         ))}
@@ -123,7 +123,7 @@ const ProjectSheet = () => {
                         <div className="flex lg:flex-col overflow-x-scroll gap-6 lg:max-w-[200px] link_scroll w-full items-center pe-5 ps-1 pt-1 pb-6 mt-6 lg:border-r-[4px] lg:border-[#7a7676]">
                             {tabs.map((tab) => (
                                 <button key={tab.id} className={`lg:px-3 hover:shadow-Dropbtn py-3 text-lg px-8 font-semibold border rounded-[5px] max-w-[200px] w-full ${activeTab === tab.id ? 'bg-[#5928E5] text-white' : 'bg-gray-200 text-black'}`}
-                                    onClick={() => handleTabClick(tab.id)}>
+                                    onClick={() => HANDLE_TAB_CLICK(tab.id)}>
                                     {tab.label}
                                 </button>
                             ))}
