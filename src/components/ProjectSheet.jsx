@@ -117,22 +117,22 @@ const ProjectSheet = () => {
                 <p className='text-4xl font-Grandstander font-bold text-center py-32 capitalize'>No data available for {selectedYear}</p>
             ) : (
                 <div className="max-w-[1140px] mx-auto px-3">
-                    <div className="flex flex-col lg:flex-row">
-                        <div className="flex lg:flex-col overflow-x-scroll gap-6 lg:max-w-[200px] link_scroll w-full items-center pe-5 ps-1 pt-1 pb-6 mt-6 lg:border-r-[4px] lg:border-[#7a7676]">
-                            {tabs.map((tab) => (
-                                <button key={tab.id} className={`lg:px-3 hover:shadow-Dropbtn py-3 text-lg px-8 font-semibold border rounded-[5px] max-w-[200px] w-full ${activeTab === tab.id ? 'bg-[#5928E5] text-white' : 'bg-gray-200 text-black'}`} onClick={() => HANDLE_TAB_CLICK(tab.id)}>{tab.label}</button>
-                            ))}
-                        </div>
-                        <div className="flex items-center flex-col gap-6 pt-1 w-full px-4 lg:px-6 pb-6 overflow-y-scroll h-[70vh] lg:h-[85vh] mt-6 link_scroll ">
-                            {noDataAvailable ? (
-                                <p className='text-3xl font-Grandstander font-bold'>No data available for {selectedYear}</p>
-                            ) : (
-                                tabs.map((tab) => (
-                                    activeTab === tab.id && tab.content
-                                ))
-                            )}
-                        </div>
-                    </div>
+                   <div className="flex flex-col lg:flex-row">
+  <div className="flex lg:flex-col overflow-x-scroll gap-6 lg:max-w-[200px] link_scroll w-full items-center pe-5 ps-1 pt-1 pb-6 mt-6 lg:border-r-[4px] lg:border-[#7a7676]">
+    {tabs.map((tab, index) => (
+      <button key={`tab-${index}`} className={`lg:px-3 hover:shadow-Dropbtn py-3 text-lg px-8 font-semibold border rounded-[5px] max-w-[200px] w-full ${activeTab === tab.id? 'bg-[#5928E5] text-white' : 'bg-gray-200 text-black'}`} onClick={() => HANDLE_TAB_CLICK(tab.id)}>{tab.label}</button>
+    ))}
+  </div>
+  <div className="flex items-center flex-col gap-6 pt-1 w-full px-4 lg:px-6 pb-6 overflow-y-scroll h-[70vh] lg:h-[85vh] mt-6 link_scroll ">
+    {noDataAvailable? (
+      <p key="no-data" className='text-3xl font-Grandstander font-bold'>No data available for {selectedYear}</p>
+    ) : (
+      tabs.map((tab, index) => (
+        activeTab === tab.id && <div key={`tab-content-${index}`}>{tab.content}</div>
+      ))
+    )}
+  </div>
+</div>
                 </div>
             )}
         </section>

@@ -1,5 +1,5 @@
 import Images from './Images';
-export const Link_Card = ({githubLink, vercelLink, projectImage, i}) => (
+export const LINK_CARD = ({githubLink, vercelLink, projectImage, i}) => (
     <div key={i} className="flex flex-col md:flex-row w-full justify-between items-center border p-3 rounded-[16px] hover:shadow-LinkBox duration-300 ease-linear">
     <div className="flex gap-1">
       <h3 className="text-2xl font-medium font-Grandstander">{`${i + 1}.`}</h3>

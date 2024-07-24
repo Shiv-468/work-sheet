@@ -1,11 +1,11 @@
 import React from 'react'
 import { marchData } from '../common/Helper';
-import { Link_Card } from '../common/LinkCard';
+import { LINK_CARD } from '../common/LinkCard';
 const MarchData = ({year}) => {
   return (
     <>
     {marchData[year].map((project, index) => (
-      <Link_Card githubLink={project.githubLink} vercelLink={project.vercelLink} projectImage={project.image} i={index}/>
+      <LINK_CARD githubLink={project.githubLink} vercelLink={project.vercelLink} projectImage={project.image} i={index}/>
     ))}
   </>
   )

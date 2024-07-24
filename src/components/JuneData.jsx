@@ -1,11 +1,11 @@
 import React from 'react'
 import { juneData } from '../common/Helper';
-import { Link_Card } from '../common/LinkCard';
+import { LINK_CARD } from '../common/LinkCard';
 const JuneData = ({year}) => {
   return (
     <>
     {juneData[year].map((project, index) => (
-      <Link_Card githubLink={project.githubLink} vercelLink={project.vercelLink} projectImage={project.image} i={index}/>
+      <LINK_CARD githubLink={project.githubLink} vercelLink={project.vercelLink} projectImage={project.image} i={index}/>
     ))}
   </>
   )
