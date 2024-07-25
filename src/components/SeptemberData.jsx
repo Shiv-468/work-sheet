@@ -2,7 +2,7 @@ import React from 'react'
 
 const SeptemberData = () => {
   return (
-    <div>SeptemberData</div>
+    <div className = "flex flex-col w-full">SeptemberData</div>
   )
 }
 

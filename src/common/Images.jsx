@@ -88,8 +88,8 @@ const Images = ({ image, className }) => {
   };
 
   return (
-    <span className={`inline-block ${className}`}>
-      {image && <img src={imageList[image]} alt={image} />}
+    <span className={`rounded-[16px] ${className}`}>
+      {image && <img src={imageList[image]} alt={image} className='rounded-[16px] max-w-[230px] max-h-[150px] border' />}
     </span>
   );
 };

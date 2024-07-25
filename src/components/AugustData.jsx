@@ -2,7 +2,7 @@ import React from 'react'
 
 const AugustData = () => {
   return (
-    <div>AugustData</div>
+    <div className = "flex w-full">AugustData</div>
   )
 }
 
