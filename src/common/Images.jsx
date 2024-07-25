@@ -1,4 +1,5 @@
 import React from 'react';
+import uselocation from '../assets/images/webp/uselocation.webp'
 import Eventsfree from '../assets/images/webp/Eventsfree.webp';
 import FestivalProfile from '../assets/images/webp/FestivalProfile.webp';
 import Sneakers from '../assets/images/webp/Sneakers.webp';
@@ -85,6 +86,7 @@ const Images = ({ image, className }) => {
     LayoutTailwind,
     Crappo,
     DecoMaster,
+    uselocation
   };
 
   return (

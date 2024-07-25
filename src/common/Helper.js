@@ -185,6 +185,11 @@ export const julyData = {
             image: 'Hubrich',
         },
         {
+            githubLink:'https://github.com/Shiv-468/practise-work.git',
+            vercelLink:'https://practise-work-virid.vercel.app/',
+            image: 'uselocation',
+        },
+        {
             githubLink: 'https://github.com/Shiv-468/cutting-edge.git',
             vercelLink: 'https://cutting-edge-zeta.vercel.app/',
             image: 'Edge',
