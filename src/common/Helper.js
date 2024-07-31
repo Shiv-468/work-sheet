@@ -194,6 +194,11 @@ export const julyData = {
             vercelLink: 'https://cutting-edge-zeta.vercel.app/',
             image: 'Edge',
         },
+        {
+            githubLink:'https://github.com/Vishalmanglaw453/Breda-university.git',
+            vercelLink:'https://breda-university-three.vercel.app',
+            image: 'breda_university',
+        },
     ],
     // 2023: [
     // ],

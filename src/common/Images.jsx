@@ -42,6 +42,7 @@ import VipeStudio from '../assets/images/webp/VipeStudio.webp';
 import LayoutTailwind from '../assets/images/webp/LayoutTailwind.webp';
 import Crappo from '../assets/images/webp/Crappo.webp';
 import DecoMaster from '../assets/images/webp/DecoMaster.webp';
+import breda_university from '../assets/images/webp/breda-university.webp';
 const Images = ({ image, className }) => {
   const imageList = {
     Eventsfree,
@@ -86,7 +87,8 @@ const Images = ({ image, className }) => {
     LayoutTailwind,
     Crappo,
     DecoMaster,
-    uselocation
+    uselocation,
+    breda_university
   };
 
   return (
