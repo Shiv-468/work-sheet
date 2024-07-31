@@ -199,6 +199,11 @@ export const julyData = {
             vercelLink:'https://breda-university-three.vercel.app',
             image: 'breda_university',
         },
+        {
+            githubLink:'https://github.com/INDERJEETBHADU/bedrock.git',
+            vercelLink:'https://bed-rocks-react.web.app/#',
+            image: 'bed_rock',
+        },
     ],
     // 2023: [
     // ],

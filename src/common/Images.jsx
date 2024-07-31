@@ -43,6 +43,7 @@ import LayoutTailwind from '../assets/images/webp/LayoutTailwind.webp';
 import Crappo from '../assets/images/webp/Crappo.webp';
 import DecoMaster from '../assets/images/webp/DecoMaster.webp';
 import breda_university from '../assets/images/webp/breda-university.webp';
+import bed_rock from '../assets/images/webp/bed-rocks.webp'
 const Images = ({ image, className }) => {
   const imageList = {
     Eventsfree,
@@ -88,7 +89,8 @@ const Images = ({ image, className }) => {
     Crappo,
     DecoMaster,
     uselocation,
-    breda_university
+    breda_university,
+    bed_rock
   };
 
   return (
