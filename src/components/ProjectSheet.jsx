@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Icons from './icons';
-import Downchevron from '../assets/images/webp/down-chevron-svgrepo-com.svg';
+import down_chevron from '../assets/images/webp/down-chevron.svg';
 import JanuaryData from './JanuaryData';
 import FebruaryData from './FebruaryData';
 import MarchData from './MarchData';
@@ -12,7 +12,7 @@ import OctoberData from './OctoberData';
 import NovemberData from './NovemberData';
 import DecemberData from './DecemberData';
 
-const projectsByMonth = {
+const PROJECT_BY_MONTHS = {
     2024: {
         January2024: <JanuaryData year={2024} />,
         February2024: <FebruaryData year={2024} />,
@@ -33,16 +33,16 @@ const ProjectSheet = () => {
     const [selectedYear, setSelectedYear] = useState(2024);
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const years = Array.from({ length: 6 }, (_, i) => 2024 - i);
-    const [activeTab, setActiveTab] = useState(getCurrentMonthTab(2024));
+    const [activeTab, setActiveTab] = useState(GET_CURRENT_MONTH_TAB(2024));
     const [noDataAvailable, setNoDataAvailable] = useState(false);
 
     useEffect(() => {
-        if (!(projectsByMonth[selectedYear])) {
+        if (!(PROJECT_BY_MONTHS[selectedYear])) {
             setNoDataAvailable(true);
             setActiveTab(null);
         } else {
             setNoDataAvailable(false);
-            setActiveTab(getCurrentMonthTab(selectedYear));
+            setActiveTab(GET_CURRENT_MONTH_TAB(selectedYear));
         }
     }, [selectedYear]);
 
@@ -66,7 +66,7 @@ const ProjectSheet = () => {
             return {
                 id: tabId,
                 label: monthName,
-                content: (projectsByMonth[selectedYear] && projectsByMonth[selectedYear][tabId]) || <p className='font-Grandstander text-4xl font-semibold capitalize'>No projects for this month.</p>,
+                content: (PROJECT_BY_MONTHS[selectedYear] && PROJECT_BY_MONTHS[selectedYear][tabId]) || <p className='font-Grandstander text-4xl font-semibold capitalize'>No projects for this month.</p>,
             };
         });
     } else {
@@ -75,7 +75,7 @@ const ProjectSheet = () => {
             return {
                 id: tabId,
                 label: monthName,
-                content: (projectsByMonth[selectedYear] && projectsByMonth[selectedYear][tabId]) || <p className='font-Grandstander text-4xl font-semibold capitalize'>No projects for this month.</p>,
+                content: (PROJECT_BY_MONTHS[selectedYear] && PROJECT_BY_MONTHS[selectedYear][tabId]) || <p className='font-Grandstander text-4xl font-semibold capitalize'>No projects for this month.</p>,
             };
         });
     }
@@ -96,7 +96,7 @@ const ProjectSheet = () => {
                             <button className="flex items-center justify-center shadow-Dropbtn rounded-[8px] px-4 py-1 gap-2 text-lg font-Grandstander font-bold"
                                 onClick={() => setDropdownOpen(!dropdownOpen)}>
                                 <span className='pt-1'>{selectedYear}</span>
-                                <img src={Downchevron} alt="Downchevron" className='w-[20px]' />
+                                <img src={down_chevron} alt="down_chevron" className='w-[20px]' />
                             </button>
                             {dropdownOpen && (
                                 <div className="absolute right-0 mt-2 w-40 bg-white rounded shadow-Dropbtn">
@@ -139,9 +139,9 @@ const ProjectSheet = () => {
     );
 };
 
-const getCurrentMonthTab = (year) => {
+const GET_CURRENT_MONTH_TAB = (year) => {
     const month = new Date().getMonth() + 1;
-    const monthName = getMonthName(month);
+    const monthName = GET_MONTH_NAME(month);
     const currentYear = new Date().getFullYear();
     if (year === currentYear) {
         return `${monthName}${year}`;
@@ -152,7 +152,7 @@ const getCurrentMonthTab = (year) => {
     }
 };
 
-const getMonthName = (month) => {
+const GET_MONTH_NAME = (month) => {
     const monthNames = [
         'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December',
     ];
